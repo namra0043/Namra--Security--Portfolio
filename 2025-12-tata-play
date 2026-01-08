@@ -1,0 +1,69 @@
+Case Study: Hardcoded Cryptographic Key Exposing PII in Client-Side Application
+
+Overview
+
+While testing a large Indian consumer-facing media platform, I identified a
+*client-side cryptographic design flaw* where sensitive user information
+was encrypted using a **hardcoded symmetric key embedded in public JavaScript**.
+
+Although the issue was later marked as a duplicate by the organization,
+this case study documents the technical finding and security reasoning.
+
+Vulnerability Type
+
+- Use of Hardcoded Cryptographic Key
+- Client-Side Decryption of Sensitive Data
+- PII Exposure Risk
+
+CWE: CWE-321 – Use of Hard-coded Cryptographic Key  
+OWASP Top 10: A02 – Cryptographic Failures
+
+ Discovery Method
+
+- Manual inspection of client-side JavaScript bundles
+- Review of authentication and OTP-related flows
+- Analysis of browser storage (localStorage)
+
+No automation or exploitation at scale was performed.
+
+Technical Summary (Sanitised)
+
+- Sensitive user data (mobile number) was encrypted and sent to the client
+- The encryption key was **statically embedded** inside a public JavaScript file
+- Anyone inspecting the frontend source could extract the key
+- Using this key, the encrypted data could be decrypted locally
+
+
+Impact Assessment
+
+Risk Level: High  
+Affected Data: User mobile numbers (PII)
+
+Potential abuse scenarios include:
+- Privacy violations
+- Mass data harvesting
+- Chaining with XSS or token leakage
+- Bypassing UI-level data masking
+
+ Disclosure Outcome
+
+- The issue was responsibly reported with clear reproduction steps
+- The organization closed the report as *duplicate*
+- No further testing was conducted after confirmation
+
+
+ Key Learnings
+
+- Encryption alone does not equal security
+- Client-side crypto is often a red flag
+- Understanding cryptographic design is critical in AppSec
+- Duplicate findings are common in mature bug bounty programs
+
+Skills Demonstrated
+
+- Web application security testing
+- Client-side JavaScript analysis
+- Cryptographic vulnerability identification
+- PII protection assessment
+- Responsible disclosure practices
+
