@@ -1,0 +1,84 @@
+# Case Study: Production Debug Misconfiguration in Automotive Platform
+
+
+# Overview
+
+During security testing of a public-facing automotive platform used in India,
+a server-side security misconfiguration was identified where the application
+was running with **debug mode enabled in production**.
+
+This case study documents the finding, validation approach, potential impact,
+and responsible disclosure process — without exposing sensitive details.
+
+ Vulnerability Type
+
+- Security Misconfiguration
+- Debug Mode Enabled in Production
+- Sensitive Information Disclosure
+
+OWASP Top 10: A05 – Security Misconfiguration
+
+Discovery Method
+
+- Manual reconnaissance of unauthenticated endpoints
+- Observed abnormal server error behavior on malformed POST requests
+- Analyzed HTTP responses for error handling patterns
+
+No authentication bypass or exploitation was performed.
+
+ Proof of Issue (Sanitised)
+
+The server returned a verbose error page containing:
+
+- Confirmation that `DEBUG = True`
+- Internal application directory structure
+- Framework stack traces
+- Backend service configuration references
+
+This information should *never be exposed* in a production environment.
+
+Why This Is a Valid Security Issue
+
+Running production systems with debug enabled can allow attackers to:
+
+- Understand internal application logic
+- Map file system paths and frameworks
+- Identify technology versions and attack surface
+- Craft targeted exploits based on stack traces
+
+While this issue alone does not grant direct access, it significantly lowers
+the barrier for further attacks*
+
+ Impact Assessment
+
+**Risk Level:** Medium  
+**Likelihood:** Medium  
+**Impact:** Information Disclosure → Attack Surface Expansion
+
+This type of issue is commonly chained with other vulnerabilities such as:
+- IDOR
+- Auth bypass
+- Deserialization flaws
+- Known framework CVEs
+
+ Responsible Disclosure
+
+- No data modification was attempted
+- No user information was accessed
+- Findings were responsibly reported to the organization
+- Only minimal proof-of-concept evidence was shared
+
+Key Learnings
+
+- Debug misconfigurations remain common in large production systems
+- Error handling behavior is a critical recon signal
+- High-quality reporting matters more than exploitation
+- Responsible disclosure builds credibility
+
+Skills Demonstrated
+
+- Web application security testing
+- Django framework behavior analysis
+- Security misconfiguration identification
+- Evidence-driven vulnerability reporting
+- Ethical disclosure practices
