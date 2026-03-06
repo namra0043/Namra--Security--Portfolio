@@ -1,12 +1,11 @@
 Sensitive Information Disclosure via CodeIgniter Debug Mode
 
-Vendor: BharatTaxi
-Affected Asset: partners.bharattaxi.com
-Report Date: 7 February 2026
-Disclosure Method: Coordinated Disclosure via CERT-In
-Reference: CERTIn-35766826
-Status: Resolved
-
+- Responsible Disclosure
+- Vendor: BharatTaxi
+- Coordinator: CERT-In
+- Issue: CodeIgniter Debug Mode Exposure
+- Status: Fixed
+- Reference: CERTIn-35766826
 
 Summary
 
