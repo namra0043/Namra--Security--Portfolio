@@ -1,0 +1,34 @@
+VulnAI Pro – AI OSINT Intelligence Platform
+
+🚀 Overview
+VulnAI Pro is an AI-powered OSINT and attack surface intelligence platform that performs passive reconnaissance and transforms raw data into actionable security insights.
+
+🔍 Features
+AI Risk Scoring Engine
+Attack Surface Analysis
+OSINT Aggregation (crt.sh, DNS, Wayback, Threat Intel)
+Ethical Passive-Only Scanning
+
+⚙️ Installation
+
+bash
+git clone https://github.com/namra0043/vulnai-pro
+cd vulnai-pro
+pip install -r requirements.txt
+
+
+▶️ Run
+python app.py
+
+⚠️ Note
+This is a prototype built for hackathon purposes. Some integrations (API keys, extended modules) are under development.
+
+🎯 Future Improvements
+More OSINT integrations (Shodan, Hunter)
+Better AI-based risk analysis
+Exportable reports (PDF/JSON)
+
+👨‍💻 Author
+Namra Panchal
+
+Namra Panchal
