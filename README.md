@@ -1,11 +1,20 @@
-# Namra--Security--Portfolio
-Security portfolio — case studies, labs, CTF write-ups
+# VulnAI Pro - Beast Edition v3.0
+AI-powered OSINT & Attack Surface Intelligence Platform
 
-Focus: VAPT | Web App Security | Blue-team basics | Red-team basics
+## Quick Start
+```bash
+git clone https://github.com/namra0043/Namra--Security--Portfolio.git
+cd Namra--Security--Portfolio
+pip install -r requirements.txt
+python app.py
+```
 
-Contents:
-- Case studies (sanitised)
-- Lab projects
-- CTF write-ups
+## Features
+- Passive OSINT
+- Subdomain Intelligence  
+- AI Risk Engine
+- Threat Intel
+- Wayback Machine Analysis
 
-Email- namrapanchal26@gmail.com
+## Note
+Only scan targets you own or have written authorization to test.
