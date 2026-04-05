@@ -14,7 +14,7 @@ Hands-on experience in:
 
 ---
 
-## 🚨 Key Findings (Highlighted Work)
+## 🚨 Key Findings 
 
 ### 🔓 Broken Access Control – Personnel API
 
