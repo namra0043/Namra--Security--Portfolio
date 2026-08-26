@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Namra Panchal | Cybersecurity Researcher</title>
+
+<meta name="description"
+content="Namra Panchal — Cybersecurity Researcher focused on VAPT, API Security, Android Security, Digital Forensics and Vulnerability Research.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    background:#070b09;
+    color:#eaf4ee;
+    line-height:1.65;
+    font-size:15px;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+::selection{
+    background:#63f5a3;
+    color:#061009;
+}
+
+.container{
+    width:min(1080px,calc(100% - 40px));
+    margin:auto;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(7,11,9,.88);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #1a2821;
+}
+
+.nav{
+    height:66px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:monospace;
+    font-size:16px;
+    font-weight:800;
+    letter-spacing:.7px;
+}
+
+.logo span{
+    color:#63f5a3;
+}
+
+.nav-links{
+    display:flex;
+    gap:24px;
+    color:#9cac a5;
+    color:#9caca5;
+    font-size:13px;
+}
+
+.nav-links a:hover{
+    color:#63f5a3;
+}
+
+.hero{
+    padding:105px 0 85px;
+}
+
+.terminal{
+    color:#63f5a3;
+    font-family:monospace;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:clamp(45px,7vw,76px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#63f5a3;
+}
+
+.hero-text{
+    max-width:760px;
+    color:#9caca5;
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:28px;
+}
+
+.btn{
+    padding:10px 16px;
+    border:1px solid #26362e;
+    border-radius:8px;
+    font-size:13px;
+    transition:.2s;
+}
+
+.btn:hover{
+    border-color:#63f5a3;
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:#63f5a3;
+    color:#061009;
+    border-color:#63f5a3;
+    font-weight:700;
+}
+
+section{
+    padding:72px 0;
+    border-top:1px solid #17231d;
+}
+
+.label{
+    color:#63f5a3;
+    font-family:monospace;
+    font-size:12px;
+    letter-spacing:.8px;
+    margin-bottom:8px;
+}
+
+h2{
+    font-size:32px;
+    letter-spacing:-1px;
+    margin-bottom:28px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.card{
+    padding:24px;
+    border:1px solid #1b2b23;
+    border-radius:14px;
+    background:#0b110e;
+    transition:.2s;
+}
+
+.card:hover{
+    border-color:#345140;
+    transform:translateY(-3px);
+}
+
+.card-number{
+    font-family:monospace;
+    font-size:11px;
+    color:#63f5a3;
+    margin-bottom:12px;
+}
+
+.card h3{
+    font-size:19px;
+    margin-bottom:9px;
+}
+
+.card p{
+    color:#9caca5;
+    font-size:14px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:17px;
+}
+
+.tag{
+    font-family:monospace;
+    font-size:11px;
+    color:#b8d1c3;
+    border:1px solid #25372d;
+    border-radius:20px;
+    padding:5px 8px;
+}
+
+.research{
+    display:grid;
+    gap:13px;
+}
+
+.research-card{
+    display:grid;
+    grid-template-columns:55px 1fr;
+    gap:18px;
+    padding:21px;
+    border:1px solid #1b2b23;
+    border-radius:13px;
+    background:#0b110e;
+}
+
+.research-icon{
+    width:45px;
+    height:45px;
+    border:1px solid #2b4637;
+    border-radius:9px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#63f5a3;
+    font-family:monospace;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.research-card h3{
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.research-card p{
+    color:#9caca5;
+    font-size:14px;
+}
+
+.case-link{
+    display:inline-block;
+    margin-top:12px;
+    color:#63f5a3;
+    font-size:13px;
+}
+
+.case-link:hover{
+    text-decoration:underline;
+}
+
+.skills{
+    padding:25px;
+    border:1px solid #1b2b23;
+    border-radius:14px;
+    background:#0b110e;
+}
+
+.skill-group{
+    margin-bottom:23px;
+}
+
+.skill-group:last-child{
+    margin-bottom:0;
+}
+
+.skill-group h3{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+}
+
+.about p{
+    color:#9caca5;
+    font-size:15px;
+}
+
+.timeline{
+    border-left:1px solid #294235;
+    padding-left:22px;
+}
+
+.timeline-item{
+    margin-bottom:25px;
+}
+
+.timeline-item strong{
+    display:block;
+    color:#63f5a3;
+    font-size:14px;
+    margin-bottom:3px;
+}
+
+.timeline-item span{
+    color:#9caca5;
+    font-size:13px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact h2{
+    font-size:42px;
+}
+
+.contact p{
+    color:#9caca5;
+    max-width:650px;
+    margin:auto;
+}
+
+.contact .buttons{
+    justify-content:center;
+}
+
+footer{
+    border-top:1px solid #17231d;
+    padding:30px 0;
+    color:#71827a;
+    font-size:12px;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+@media(max-width:700px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .container{
+        width:min(100% - 28px,1080px);
+    }
+
+    .hero{
+        padding:80px 0 65px;
+    }
+
+    .hero h1{
+        font-size:48px;
+        letter-spacing:-2px;
+    }
+
+    .hero-text{
+        font-size:16px;
+    }
+
+    section{
+        padding:58px 0;
+    }
+
+    .grid,
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .research-card{
+        grid-template-columns:1fr;
+    }
+
+    .contact h2{
+        font-size:34px;
+    }
+
+    .footer{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="container nav">
+
+<a href="#" class="logo">
+NAMRA<span>_</span>PANCHAL
+</a>
+
+<div class="nav-links">
+<a href="#research">Research</a>
+<a href="#case-studies">Case Studies</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#about">About</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="container">
+
+<div class="terminal">
+&gt; cybersecurity_researcher.init()
+</div>
+
+<h1>
+Cybersecurity Researcher.<br>
+<span>Security Builder.</span>
+</h1>
+
+<p class="hero-text">
+
+I'm Namra Panchal, a cybersecurity researcher focused on
+VAPT, API security, web application security, Android security,
+digital forensics and vulnerability research.
+
+I enjoy finding security weaknesses, investigating suspicious
+activity and turning technical findings into clear, responsible
+security reports.
+
+</p>
+
+
+<div class="buttons">
+
+<a href="#case-studies" class="btn btn-primary">
+View Case Studies ↓
+</a>
+
+<a
+href="https://github.com/namra0043/Namra--Security--Portfolio"
+target="_blank"
+rel="noopener"
+class="btn">
+GitHub ↗
+</a>
+
+<a
+href="https://www.linkedin.com/in/namra-panchal/"
+target="_blank"
+rel="noopener"
+class="btn">
+LinkedIn ↗
+</a>
+
+<a
+href="mailto:namrapanchal26@gmail.com"
+class="btn">
+Email
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- RESEARCH -->
+
+<section id="research">
+
+<div class="container">
+
+<div class="label">01 / SECURITY RESEARCH</div>
+
+<h2>What I work on</h2>
+
+
+<div class="research">
+
+
+<div class="research-card">
+
+<div class="research-icon">
+API
+</div>
+
+<div>
+
+<h3>API & Web Security</h3>
+
+<p>
+Security testing of APIs and web applications with focus on
+authentication, authorization, access control, sensitive data
+exposure and application logic.
+</p>
+
+<div class="tags">
+<span class="tag">Burp Suite</span>
+<span class="tag">curl</span>
+<span class="tag">OWASP</span>
+<span class="tag">JWT</span>
+<span class="tag">GraphQL</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="research-card">
+
+<div class="research-icon">
+VAPT
+</div>
+
+<div>
+
+<h3>Vulnerability Research</h3>
+
+<p>
+Hands-on vulnerability discovery involving parameter manipulation,
+broken access control, authentication weaknesses, security
+misconfigurations and exposed information.
+</p>
+
+<div class="tags">
+<span class="tag">VAPT</span>
+<span class="tag">Recon</span>
+<span class="tag">Nuclei</span>
+<span class="tag">Nmap</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="research-card">
+
+<div class="research-icon">
+APK
+</div>
+
+<div>
+
+<h3>Android & APK Security</h3>
+
+<p>
+Analysis of Android applications, suspicious APKs, application
+structure, exposed secrets, behavior and supporting infrastructure.
+</p>
+
+<div class="tags">
+<span class="tag">JADX</span>
+<span class="tag">Apktool</span>
+<span class="tag">ADB</span>
+<span class="tag">MobSF</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="research-card">
+
+<div class="research-icon">
+DF
+</div>
+
+<div>
+
+<h3>Digital Forensics</h3>
+
+<p>
+Evidence-oriented investigation of suspicious files, domains,
+infrastructure and digital indicators, with emphasis on
+documenting findings clearly.
+</p>
+
+<div class="tags">
+<span class="tag">Forensics</span>
+<span class="tag">OSINT</span>
+<span class="tag">Threat Intel</span>
+<span class="tag">Malware Analysis</span>
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CASE STUDIES -->
+
+<section id="case-studies">
+
+<div class="container">
+
+<div class="label">02 / CASE STUDIES</div>
+
+<h2>Security findings & research</h2>
+
+
+<div class="grid">
+
+
+<article class="card">
+
+<div class="card-number">
+CASE_01
+</div>
+
+<h3>Broken Access Control — Personnel API</h3>
+
+<p>
+Identified an authorization weakness allowing access to
+tenant-related user information through API manipulation.
+The finding involved horizontal privilege escalation and
+was mapped to CWE-285.
+</p>
+
+<a
+href="https://github.com/namra0043/Namra--Security--Portfolio/blob/main/case-studies/broken-access-control-personnel-api.md"
+target="_blank"
+rel="noopener"
+class="case-link">
+Read case study →
+</a>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-number">
+CASE_02
+</div>
+
+<h3>API PII Exposure</h3>
+
+<p>
+Identified an API endpoint exposing sensitive user information
+without appropriate authorization controls. Documented the
+exposure and security impact responsibly.
+</p>
+
+<a
+href="https://github.com/namra0043/Namra--Security--Portfolio/blob/main/case-studies/acko-api-pii-exposure-case-study.md"
+target="_blank"
+rel="noopener"
+class="case-link">
+Read case study →
+</a>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-number">
+CASE_03
+</div>
+
+<h3>Hardcoded Cryptographic Key</h3>
+
+<p>
+Security research involving a client-side hardcoded AES key
+and analysis of how exposed cryptographic material could
+affect protection of application data.
+</p>
+
+<a
+href="https://github.com/namra0043/Namra--Security--Portfolio/blob/main/case-studies/tata-hardcoded-key.md"
+target="_blank"
+rel="noopener"
+class="case-link">
+Read case study →
+</a>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-number">
+CASE_04
+</div>
+
+<h3>OTP Endpoint Abuse</h3>
+
+<p>
+Identified an OTP endpoint that could be abused through repeated
+requests, creating a potential availability and abuse concern.
+</p>
+
+<a
+href="https://github.com/namra0043/Namra--Security--Portfolio/blob/main/case-studies/otp-flooding-loadshare.md"
+target="_blank"
+rel="noopener"
+class="case-link">
+Read case study →
+</a>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-number">
+CASE_05
+</div>
+
+<h3>Security Misconfiguration Research</h3>
+
+<p>
+Research into production security misconfigurations and exposed
+application information, with findings documented for responsible
+security reporting.
+</p>
+
+<a
+href="https://github.com/namra0043/Namra--Security--Portfolio/blob/main/case-studies/production-debug-misconfig.md"
+target="_blank"
+rel="noopener"
+class="case-link">
+Read case study →
+</a>
+
+</article>
+
+
+<article class="card">
+
+<div class="card-number">
+CASE_06
+</div>
+
+<h3>Government Domain Security Research</h3>
+
+<p>
+Conducted responsible security research involving government
+web infrastructure and reported identified security issues through
+appropriate disclosure channels. Findings received acknowledgement
+and review.
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="label">03 / PROJECTS</div>
+
+<h2>Projects</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="card-number">
+PROJECT_01
+</div>
+
+<h3>Cyber Suraksha</h3>
+
+<p>
+A cybersecurity awareness and scam-protection concept designed
+to help users identify suspicious messages and calls, report scams,
+track cases and involve trusted contacts.
+</p>
+
+<div class="tags">
+<span class="tag">Cybersecurity</span>
+<span class="tag">Anti-Scam</span>
+<span class="tag">Security Awareness</span>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+PROJECT_02
+</div>
+
+<h3>Security Recon Pipeline</h3>
+
+<p>
+A reconnaissance workflow combining subdomain discovery,
+HTTP probing, port scanning, crawling, URL collection and
+automated vulnerability triage.
+</p>
+
+<div class="tags">
+<span class="tag">Subfinder</span>
+<span class="tag">Amass</span>
+<span class="tag">httpx</span>
+<span class="tag">Nuclei</span>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+PROJECT_03
+</div>
+
+<h3>Malicious APK Investigation</h3>
+
+<p>
+Investigation of a suspicious Android application distributed
+through a traffic-challan impersonation campaign, including
+APK analysis, infrastructure research and identification of
+investigation indicators.
+</p>
+
+<div class="tags">
+<span class="tag">Android</span>
+<span class="tag">JADX</span>
+<span class="tag">Apktool</span>
+<span class="tag">OSINT</span>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-number">
+PROJECT_04
+</div>
+
+<h3>VulnAI Pro</h3>
+
+<p>
+A security-focused project exploring the use of AI to assist
+with vulnerability identification, analysis and security
+research workflows.
+</p>
+
+<div class="tags">
+<span class="tag">AI</span>
+<span class="tag">Security</span>
+<span class="tag">Automation</span>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="label">04 / TECHNICAL SKILLS</div>
+
+<h2>Security toolkit</h2>
+
+
+<div class="skills">
+
+
+<div class="skill-group">
+
+<h3>Web & API Security</h3>
+
+<div class="tags">
+
+<span class="tag">Burp Suite</span>
+<span class="tag">OWASP</span>
+<span class="tag">curl</span>
+<span class="tag">SQLMap</span>
+<span class="tag">FFUF</span>
+<span class="tag">JWT</span>
+<span class="tag">GraphQL</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-group">
+
+<h3>Reconnaissance & Network</h3>
+
+<div class="tags">
+
+<span class="tag">Nmap</span>
+<span class="tag">Nuclei</span>
+<span class="tag">Subfinder</span>
+<span class="tag">Amass</span>
+<span class="tag">httpx</span>
+<span class="tag">Naabu</span>
+<span class="tag">Katana</span>
+<span class="tag">Wireshark</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-group">
+
+<h3>Android Security</h3>
+
+<div class="tags">
+
+<span class="tag">JADX</span>
+<span class="tag">Apktool</span>
+<span class="tag">MobSF</span>
+<span class="tag">ADB</span>
+<span class="tag">Frida</span>
+<span class="tag">Objection</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-group">
+
+<h3>Systems & Development</h3>
+
+<div class="tags">
+
+<span class="tag">Linux</span>
+<span class="tag">Python</span>
+<span class="tag">JavaScript</span>
+<span class="tag">Node.js</span>
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">Git</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="label">05 / ABOUT</div>
+
+<h2>Background</h2>
+
+
+<div class="about">
+
+
+<div>
+
+<p>
+I'm a cybersecurity-focused professional with a background in
+computer applications and hands-on experience in vulnerability
+research, VAPT, API security, Android security and digital forensics.
+</p>
+
+<br>
+
+<p>
+My approach is practical: understand how a system works,
+identify where its security assumptions fail, validate the issue,
+document the evidence and report it responsibly.
+</p>
+
+<br>
+
+<p>
+I'm particularly interested in security research that can
+translate into real-world defensive tools and useful
+investigation workflows.
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<strong>BCA — Computer Applications</strong>
+
+<span>
+Computer applications background with a focused transition
+toward cybersecurity and digital forensics.
+</span>
+
+</div>
+
+
+<div class="timeline-item">
+
+<strong>eJPT</strong>
+
+<span>
+Practical penetration-testing and offensive-security training.
+</span>
+
+</div>
+
+
+<div class="timeline-item">
+
+<strong>Google Cybersecurity Certificate</strong>
+
+<span>
+Cybersecurity fundamentals, networks, Linux, security operations
+and incident-response concepts.
+</span>
+
+</div>
+
+
+<div class="timeline-item">
+
+<strong>Ethical Hacking Internship</strong>
+
+<span>
+Hands-on exposure to practical security testing and
+cybersecurity workflows.
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<div class="label">06 / CONTACT</div>
+
+<h2>Let's connect.</h2>
+
+<p>
+Open to cybersecurity research, VAPT, security analyst,
+digital forensics and security engineering opportunities.
+</p>
+
+
+<div class="buttons">
+
+<a
+href="mailto:namrapanchal26@gmail.com"
+class="btn btn-primary">
+namrapanchal26@gmail.com
+</a>
+
+<a
+href="https://www.linkedin.com/in/namra-panchal/"
+target="_blank"
+rel="noopener"
+class="btn">
+LinkedIn ↗
+</a>
+
+<a
+href="https://github.com/namra0043/Namra--Security--Portfolio"
+target="_blank"
+rel="noopener"
+class="btn">
+GitHub ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer">
+
+<span>
+© 2026 Namra Panchal
+</span>
+
+<span>
+Cybersecurity · VAPT · Digital Forensics · Security Research
+</span>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
